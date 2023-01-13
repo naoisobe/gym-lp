@@ -14,6 +14,18 @@
     </head>
 
     <body>
+      
+      <div id="nav-content">
+          <nav>
+              <ul>
+                <li><a href="#about" class="link">About</a></li>
+                <li><a href="#price" class="link">Price</a></li>
+                <li><a href="#staff" class="link">Staff</a></li>
+                <li><a href="#studio" class="link">Studio</a></li>
+                <li><a href="#contact" class="link">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
 
       <div id="home" class="big-bg">
           <header class="page-header wrapper pc-header">
@@ -41,6 +53,13 @@
               </nav>
       
               <button class="header__hamburger hamburger">
+                <div id="toggle" class="sp-header">
+                  <div id="toggle-box">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                  </div>
+              </div>
               </button>
             </div>
           </header>
@@ -193,6 +212,14 @@
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"　integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="　crossorigin="anonymous"></script>
 <script>
   $(function(){
+    $('#toggle').on('click', function() {
+      $('body').toggleClass('is-open');
+      $('#main').toggleClass('overlay');
+    });
+    $(document).on('click','.overlay, .link', function() {
+      $('body').removeClass('is-open');
+      $('#main').removeClass('overlay');
+    });
      alert('hoge');
   });
 </script>
