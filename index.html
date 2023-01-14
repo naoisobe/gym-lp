@@ -212,6 +212,15 @@
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"　integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="　crossorigin="anonymous"></script>
 <script>
   $(function(){
+    $('a[href^="#"]').click(function(){
+      var adjust = 0;
+      var speed = 400;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top + adjust;
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+    });
     $('#toggle').on('click', function() {
       $('body').toggleClass('is-open');
       $('#main').toggleClass('overlay');
@@ -220,6 +229,5 @@
       $('body').removeClass('is-open');
       $('#main').removeClass('overlay');
     });
-     alert('hoge');
   });
 </script>
