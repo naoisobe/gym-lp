@@ -23,8 +23,10 @@ img{
   color: #282f35;
   font-size: 6rem;
   /* font-style: italic; */
+  font-family: 'Josefin Sans', sans-serif;
   /* margin:0 auto 80px; */
   /* padding: 0 20px; */
+  margin-bottom: 20px;
   text-align: center;
 }
 /* .section-title::after{
@@ -96,8 +98,8 @@ img{
 }
 .header.fixed{
   position: fixed;
-  background-color: #282f35;
-  padding: 20px;
+  background-color: #DDDDDD;
+  padding: 10px;
   width: 100%;
   transition: .3s;
 }
@@ -106,7 +108,7 @@ img{
   text-decoration: none;
   transition: .3s;
   font-weight: bold;
-  font-style: italic;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .header a:hover{
   opacity: .7;
@@ -159,7 +161,7 @@ img{
 .burger-btn{
   display: block;
   position: absolute;
-  top: 30px;
+  top: 17px;
   right: 4vw;
 }
 .burger-btn .bar{
@@ -205,13 +207,14 @@ button{
 /* fv
 /* ---------------------------- */
 .fv{
-  height: 100vh;
+  /* height: 100vh; */
+  margin-top: 300px;
   min-height: 550px;
   position: relative
 }
 .fv img{
   object-fit: cover;
-  height: 100vh;
+  /* height: 100vh; */
   min-height: 100%;
 }
 .main-copy{
@@ -353,14 +356,14 @@ table td{
 /* 店舗情報・地図 */
 /* ---------------------------- */
 #location {
-  padding: 4% 0; 
+  /* padding: 4% 0;  */
 }
 #location .wrapper {
   display: flex;
   justify-content: space-between;
 }
 .location-info {
-  /* width: 22%; */
+  width: 22%;
 }
 .location-info p {
   padding: 12px 10px;
@@ -497,6 +500,7 @@ table td{
     #sns .wrapper {
         flex-direction: column;
     }
+    iframe,
     .location-info,
     .location-map,
     .sns-box {
