@@ -58,7 +58,7 @@ img{
   width: 235px;
   line-height: 60px;
   margin: 0 auto 70px;
-  background-color: #FFCC00;
+  /* background-color: #FFCC00; */
   box-shadow: 0 0 6px #1b1310;
   border-radius: 10px;
   text-align: center;
@@ -208,7 +208,7 @@ button{
 /* ---------------------------- */
 .fv{
   /* height: 100vh; */
-  margin-top: 300px;
+  margin-top: 20px;
   min-height: 550px;
   position: relative
 }
@@ -288,6 +288,45 @@ button{
 }
 .staff-list-text{
   padding: 25px 20px;
+}
+
+.card{
+  /* width: 288px; */
+  height: auto;
+}
+.card__imgframe{
+  width: 100%;
+  height: auto;
+  padding-top: 56.25%;
+  background: url(https://placehold.jp/640x360.png) no-repeat center;
+  background-size: cover;
+  box-sizing: border-box;
+}
+.card__textbox{
+  width: 100%;
+  height: auto;
+  padding: 20px 18px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+.card__textbox > * + *{
+  margin-top: 10px;
+}
+.card__titletext{
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 125%;
+}
+.card__overviewtext{
+  font-size: 12px;
+  line-height: 150%;
+}
+.card-skin{
+  overflow: hidden;
+  border-radius: 8px;
+  border-left: solid 1px #ddd;
+  border-right: solid 1px #ddd;
+  border-bottom: solid 5px #888;
 }
 
 
@@ -388,6 +427,51 @@ table td{
 }
 
 /* ---------------------------- */
+/* SNS */
+/* ---------------------------- */
+.sns-list {
+  list-style: none;
+  margin: 0 0 -8px;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.sns-list li {
+  margin: 0 10px 10px 0;
+  padding: 0;
+}
+.sns-list li a::before {
+  background-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 16px;
+  height: 42px; /* Button height */
+  line-height: 42px; /* Button height */
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  text-align: center;
+  width: 42px; /* Button width */
+}
+.sns-list li a[href*="facebook.com"]::before       { border-color: #3b5998; color: #3b5998; content: "\f09a"; }
+.sns-list li a[href*="instagram.com"]::before      { border-color: #125688; color: #125688; content: "\f16d"; }
+.sns-list li a[href*="twitter.com"]::before        { border-color: #55acee; color: #55acee; content: "\f099"; }
+.sns-list li a[href*="youtube.com"]::before        { border-color: #cd201f; color: #cd201f; content: "\f16a"; }
+.sns-list li a:hover::before {
+  color: #fff;
+}
+.sns-list li a[href*="facebook.com"]:hover::before       { background-color: #3b5998; }
+.sns-list li a[href*="instagram.com"]:hover::before      { background-color: #125688; }
+.sns-list li a[href*="twitter.com"]:hover::before        { background-color: #55acee; }
+.sns-list li a[href*="youtube.com"]:hover::before        { background-color: #cd201f; }
+
+
+/* ---------------------------- */
 /* footer
 /* ---------------------------- */
 .footer{
@@ -432,6 +516,10 @@ table td{
   /* ---------------------------- */
   /* fv_sp
   /* ---------------------------- */
+  .fv {
+    margin-top: 250px;
+  }
+
   .main-copy{
     top: 50%;
     left: 50%;
