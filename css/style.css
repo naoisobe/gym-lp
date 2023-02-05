@@ -254,7 +254,8 @@ button{
   margin-bottom: 70px;
 }
 .concept-text{
-  max-width: 440px;
+  text-align: center;
+  /* max-width: 440px; */
   line-height: 1.87;
   font-weight: bold;
 }
@@ -291,7 +292,7 @@ button{
 }
 
 .card{
-  /* width: 288px; */
+  /* width: 30px; */
   height: auto;
 }
 .card__imgframe{
@@ -318,7 +319,7 @@ button{
   line-height: 125%;
 }
 .card__overviewtext{
-  font-size: 12px;
+  font-size: 17px;
   line-height: 150%;
 }
 .card-skin{
@@ -429,47 +430,80 @@ table td{
 /* ---------------------------- */
 /* SNS */
 /* ---------------------------- */
-.sns-list {
-  list-style: none;
-  margin: 0 0 -8px;
-  overflow: hidden;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-.sns-list li {
-  margin: 0 10px 10px 0;
-  padding: 0;
-}
-.sns-list li a::before {
-  background-color: #fff;
-  border-style: solid;
-  border-width: 1px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  color: #fff;
-  display: inline-block;
-  font-family: FontAwesome;
-  font-size: 16px;
-  height: 42px; /* Button height */
-  line-height: 42px; /* Button height */
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-  text-align: center;
-  width: 42px; /* Button width */
-}
-.sns-list li a[href*="facebook.com"]::before       { border-color: #3b5998; color: #3b5998; content: "\f09a"; }
-.sns-list li a[href*="instagram.com"]::before      { border-color: #125688; color: #125688; content: "\f16d"; }
-.sns-list li a[href*="twitter.com"]::before        { border-color: #55acee; color: #55acee; content: "\f099"; }
-.sns-list li a[href*="youtube.com"]::before        { border-color: #cd201f; color: #cd201f; content: "\f16a"; }
-.sns-list li a:hover::before {
-  color: #fff;
-}
-.sns-list li a[href*="facebook.com"]:hover::before       { background-color: #3b5998; }
-.sns-list li a[href*="instagram.com"]:hover::before      { background-color: #125688; }
-.sns-list li a[href*="twitter.com"]:hover::before        { background-color: #55acee; }
-.sns-list li a[href*="youtube.com"]:hover::before        { background-color: #cd201f; }
 
+/* ボタン全体 */
+.sns_item{
+  border-radius:50%;
+  position:relative;
+  display:inline-block;
+  width:50px;
+  height:50px;
+  font-size:30px;
+  text-decoration:none;
+  transition:.5s;
+  }
+  /* ボタンマウスホバー時のテキスト指定 */
+  .sns_item:hover{
+  color:#fff!important;
+  }
+  /* アイコンをど真ん中に */
+  .sns_item i{
+  position:absolute;
+  top:50%;
+  left:50%;
+  -ms-transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+  }
+  /* Twitter */
+  .sns_item.fl_tw2{
+  border:solid 1px #55acee;
+  color:#55acee;
+  }
+  /* Twitterマウスホバー時 */
+  .sns_item.fl_tw2:hover{
+  border:solid 1px #55acee;
+  background:#55acee;
+  }
+  /* Instagram */
+  .sns_item.insta_btn2 {
+  border:solid 1px #c6529a;
+  color:#c6529a;
+  font-size:35px;
+  }
+  /* Instagramマウスホバー時 */
+  .sns_item.insta_btn2:hover{
+  border:solid 1px #c6529a;
+  background:#c6529a;
+  }
+
+  /* LINE */
+  .sns_item.fl_li2{
+  border:solid 1px #00c300;
+  color:#00c300;
+  font-size:35px;
+  }
+  /* LINEマウスホバー時 */
+  .sns_item.fl_li2:hover{
+  border:solid 1px #00c300;
+  background:#00c300;
+  }
+  
+  /* ulタグの内側余白を０にする */
+  ul.sns_list{
+  padding:0;
+  }
+  /* ボタン全体の位置 */
+  .sns_list{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+  }
+  /* ボタン同士の余白 */
+  .sns_list li{
+  margin: 10px;
+  text-align:center;
+  }
 
 /* ---------------------------- */
 /* footer
@@ -545,7 +579,8 @@ table td{
       margin-bottom: 40px;
     }
     .concept-text{
-      margin-bottom: 30px;
+      /* margin-bottom: 30px; */
+      margin: 10px 13px;
     }
     .concept-img-wrapper{
       width: 100%;
