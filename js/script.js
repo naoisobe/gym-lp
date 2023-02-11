@@ -16,15 +16,18 @@ $('.burger-btn').on('click',function(){
 });
 
 // スムーズスクロール
-$('a[href^="#"]').click(function(){
+$('a[href^="#"]').on('click', function(){
   var adjust = 0;
   var speed = 400;
   var href= $(this).attr("href");
   var target = $(href == "#" || href == "" ? 'html' : href);
   var position = target.offset().top + adjust;
-  $('.header-nav').fadeToggle(300);
-  $('.burger-btn').toggleClass('cross');
-  $('body').toggleClass('noscroll');
+  if (typeof $(this).attr("id") === "undefined") {
+    $('.header-nav').fadeToggle(300);
+    $('.burger-btn').toggleClass('cross');
+    $('body').toggleClass('noscroll');
+  }
   $('body,html').animate({scrollTop:position}, speed, 'swing');
   return false;
 });
+
